@@ -1,0 +1,68 @@
+query                      before: n  rank   after: n  rank   mode     after top 3
+"invoice"                  4          1      29        1      all      Invoice Generator | Proforma Invoice | Billing Schedule
+"bill"                     27         5      29        2      all      Bill of Sale | Invoice Generator | Proforma Invoice
+"bills"                    2          1      29        2      all      Bill of Sale | Invoice Generator | Proforma Invoice
+"gst bill"                 0          -      4         1      all      GST Quotation | GST Reconciliation Check | Invoice Generator
+"gst invoice"              0          -      4         2      all      GST Quotation | Invoice Generator | GST Reconciliation Check
+"bill banana"              0          -      29        2      all      Bill of Sale | Invoice Generator | Proforma Invoice
+"बिल"                      0          -      29        1      all      Invoice Generator | Proforma Invoice | Billing Schedule
+"invioce"                  0          -      4         1      all      Invoice Generator | Proforma Invoice | Payment Terms
+"receipt"                  3          1      3         1      all      Receipt Template | Delivery Receipt | Property Paper Checker
+"rasid"                    0          -      3         1      all      Receipt Template | Delivery Receipt | Property Paper Checker
+"quotation"                2          2      5         2      all      Quotation Comparison | GST Quotation | Tax Estimator
+"quotaion"                 0          -      2         2      all      Quotation Comparison | GST Quotation
+"gst quotation"            1          1      2         1      all      GST Quotation | Tax Estimator
+"udhaar"                   0          -      7         1      all      Bad Debt Recovery | Advance Recovery Letter | Due Diligence Pack
+"udhaar wapas"             0          -      7         1      partial  Bad Debt Recovery | Advance Recovery Letter | Due Diligence Pack
+"payment reminder"         0          -      12        2      partial  Payment Terms | Customer Follow-up | Loan Prepayment Calculator
+"khata"                    0          -      2         1      all      Expense Tracker | Expense Report
+"daily kharcha"            0          -      1         1      all      Expense Tracker
+"salary"                   6          1      7         1      all      Salary Calculator | Salary Slip | Salary Negotiation Coach
+"salary slip"              1          1      1         1      all      Salary Slip
+"staff salary"             0          -      5         1      all      Salary Calculator | Salary Slip | Payroll Engine
+"tankhwah"                 0          -      7         1      all      Payroll Engine | Salary Calculator | Salary Slip
+"attendance"               3          1      3         1      all      Attendance Tracker | Attendance Register | Attendance Improvement Notice
+"staff hazri"              0          -      3         1      all      Attendance Tracker | Attendance Register | Attendance Improvement Notice
+"stock"                    3          1      23        1      all      Stock Audit | Stock Watchdog | Supplier Order
+"maal ka hisab"            0          -      12        1      partial  Stock Audit | Expense Tracker | Stock Watchdog
+"profit"                   5          1      8         1      all      Profit Calculator | Partnership Deed | Break-Even Calculator
+"munafa"                   0          -      8         1      all      Profit Calculator | Partnership Deed | Break-Even Calculator
+"passport photo"           2          1      18        1      all      Passport Photo Maker | Merge Photo & Signature | Add Name & DOB on Photo
+"passport size photo"      0          -      18        1      all      Passport Photo Maker | Merge Photo & Signature | Add Name & DOB on Photo
+"remove background"        1          1      1         1      all      Remove Background
+"photo background remove"  0          -      1         1      all      Remove Background
+"signature"                9          1      47        1      all      Generate Signature | Signature 50mm x 20mm | Resize Signature
+"rent agreement"           1          1      3         1      all      Rent Agreement | Settlement Agreement | Labour Law Compliance Audit
+"kiraya agreement"         0          -      3         1      all      Rent Agreement | Settlement Agreement | Labour Law Compliance Audit
+"loan agreement"           1          1      2         1      all      Loan Agreement | Guarantor Letter
+"shop poster"              0          -      1         1      all      Poster and Flyer Studio
+"whatsapp catalogue"       1          1      2         1      all      WhatsApp Catalogue Maker | WhatsApp Sales Funnel
+"caption"                  4          1      4         1      all      Caption Generator | Shorts Finder | Carousel Studio
+"resume"                   1          1      1         1      all      Resume Studio
+
+40 queries
+zero-result rate     before 53% (21)   after 0% (0)
+expected app top 3   before 45% (18)   after 100% (40)
+expected app found   before 48% (19)   after 100% (40)
+after: 3 queries answered with "closest matches" fallback
+
+Hold-out set (not used for tuning):
+"tax invoice"                before 0/-     after 3/2     all      Tax Estimator | Invoice Generator | GST Quotation
+"estimate banana"            before 0/-     after 5/1     all      Quotation Comparison | GST Quotation | Tax Estimator
+"employee salary slip"       before 0/-     after 1/1     all      Salary Slip
+"customer ko reminder"       before 0/-     after 1/1     all      Customer Follow-up
+"stock register"             before 0/-     after 12/1    partial  Stock Audit | Stock Watchdog | Attendance Register
+"kharcha"                    before 0/-     after 2/1     all      Expense Tracker | Expense Report
+"photo ka background hatao"  before 0/-     after 12/1    partial  Remove Background | Blur Background | Catalogue Photo Studio
+"sign banao"                 before 0/-     after 47/2    all      Resize Sign 6cm x 2cm | Generate Signature | Signature 50mm x 20mm
+"naukri resume"              before 0/-     after 1/1     partial  Resume Studio
+"shop ke liye poster"        before 0/-     after 12/1    partial  Poster and Flyer Studio | YouTube Banner Resize | Online Store Launch Kit
+"delivery challan"           before 1/1     after 2/1     all      Delivery Challan | Billing Schedule
+"proforma"                   before 1/1     after 1/1     all      Proforma Invoice
+"pay slip"                   before 0/-     after 2/1     all      Salary Slip | Commission Slip
+"rent receipt"               before 0/-     after 12/1    partial  Receipt Template | Rent Agreement | Delivery Receipt
+"gst return"                 before 0/-     after 12/4    partial  Return Authorization | GST Quotation | Return Reduction Analyser
+"passport foto"              before 0/-     after 12/1    partial  Passport Photo Maker | Merge Photo & Signature | Resize Image 3.5cm x 4.5cm
+hold-out zero-result  before 14/16   after 0/16
+hold-out top 3        before 2/16   after 15/16
+speed: 5.57 ms per query over 425 apps
